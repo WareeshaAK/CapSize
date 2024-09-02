@@ -1,0 +1,144 @@
+/* General styles */
+.containerStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #426c36;
+  padding: 0 50px;
+  font-family: 'Century Gothic', sans-serif;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.leftSideStyle {
+  flex: 1;
+  color: #f6d7ff;
+}
+
+.rightSideStyle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: justify;
+}
+
+.centerBoxStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 30px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  height: auto; /* Ensure height adjusts to content */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  position: relative;
+}
+
+/* Additional Styles */
+.typing-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ccb2d3;
+  animation: typing 5s steps(8, end) 1s 1 normal both, blink 1s step-end infinite;
+  font-family: 'Courier New', monospace;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: #ccb2d3; }
+  25%, 75% { border-color: transparent; }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0; /* Ensure body has no margin */
+    background-color: #426c36; /* Set the background color for mobile */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  .containerStyle {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add padding */
+    height: auto; /* Adjust height */
+  }
+
+  .leftSideStyle {
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .rightSideStyle {
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center text */
+    text-align: justify;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 20px; /* Add spacing between sections */
+    overflow: hidden; /* Ensure text does not overflow */
+  }
+
+  .centerBoxStyle {
+    width: 100%; /* Adjust width for mobile */
+    max-width: 90%; /* Ensure the box does not exceed the viewport width */
+    height: auto; /* Auto height for mobile */
+    padding: 20px; /* Add padding */
+    margin: 0 40px; /* Add spacing around centerBox */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    display: flex; /* Center horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .titleStyle {
+    font-size: 4rem; /* Adjust font size for mobile */
+    margin-top: 50px; /* Adjust top margin for mobile */
+  }
+
+  .subtitleStyle {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .buttonGroupStyle {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 10px; /* Add gap between buttons */
+  }
+
+  .buttonStyle {
+    font-size: 0.9rem; /* Adjust font size for buttons */
+  }
+
+  .startButtonStyle {
+    margin-top: 10px; /* Adjust margin for button */
+  }
+
+  .messageBubbleStyle {
+    bottom: 20px; /* Adjust position for mobile */
+    padding: 10px;
+  }
+
+  .welcomeMessageStyle {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+}
